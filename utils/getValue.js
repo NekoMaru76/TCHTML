@@ -1,8 +1,7 @@
-import Value from "../Tags/Value.js";
-import Undefined from "../Tags/Undefined.js";
+import { Value, Undefined } from "../Tags/Value.js";
 
 export default function getValue(scope, element) {
   const value = element.run(scope);
 
-  return value instanceof Value ? value : new Undefined;
+  return (value instanceof Value) ? value : new Undefined;
 };

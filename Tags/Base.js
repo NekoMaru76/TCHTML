@@ -3,7 +3,7 @@ export default class Base extends HTMLElement {
     super();
 
     this.__data__ = {};
-    this.style.visibility = "hidden";
+    this.style.display = "none";
   }
   run() {}
 };

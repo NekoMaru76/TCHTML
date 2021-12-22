@@ -1,6 +1,5 @@
 import getElement from "../utils/getElement.js";
-import Value from "./Value.js";
-import Undefined from "./Undefined.js";
+import { Value, Undefined } from "./Value.js";
 import Base from "./Base.js";
 
 export default class Define extends Base {

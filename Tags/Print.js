@@ -1,6 +1,5 @@
 import Base from "./Base.js";
-import Value from "./Value.js";
-import Undefined from "./Undefined.js";
+import { Value, Undefined } from "./Value.js";
 import getValue from "../utils/getValue.js";
 
 export default class Print extends Base {
