@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <script type="module">
+      import * as TCHTML from "/index.js";
+    </script>
+    <tchtml-main>
+      <tchtml-scope>
+        <tchtml-define name="shit">
+          <tchtml-string>Hello World</tchtml-string>
+        </tchtml-define>
+        <tchtml-print>
+          <tchtml-get name="shit" />
+        </tchtml-print>
+      </tchtml-scope>
+    </tchtml-main>
+  </body>
+</html>
