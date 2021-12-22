@@ -1,6 +1,5 @@
 import { Value, Number, Undefined } from "./Value.js";
 import Base from "./Base.js";
-import getValue from "../utils/getValue.js";
 
 export class Sum extends Base {
   run(scope) {
