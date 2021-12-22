@@ -3,7 +3,7 @@ import Base from "./Base.js";
 
 export class Sum extends Base {
   run(scope) {
-    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
     const num = new Number;
 
     for (let i = 1; i < this.children.length; i++) {
@@ -11,7 +11,7 @@ export class Sum extends Base {
 
       if (!(child instanceof Base)) continue;
 
-      n += child.toNumber().run();
+      n += child.toNumber().run(scope);
     }
 
     num.textContent = `${n}`;
@@ -22,7 +22,7 @@ export class Sum extends Base {
 
 export class Sub extends Base {
   run(scope) {
-    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
     const num = new Number;
 
     for (let i = 1; i < this.children.length; i++) {
@@ -30,7 +30,7 @@ export class Sub extends Base {
 
       if (!(child instanceof Base)) continue;
 
-      n -= child.toNumber().run();
+      n -= child.toNumber().run(scope);
     }
 
     console.log(n);
@@ -43,7 +43,7 @@ export class Sub extends Base {
 
 export class Mul extends Base {
   run(scope) {
-    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
     const num = new Number;
 
     for (let i = 1; i < this.children.length; i++) {
@@ -51,7 +51,7 @@ export class Mul extends Base {
 
       if (!(child instanceof Base)) continue;
 
-      n *= child.toNumber().run();
+      n *= child.toNumber().run(scope);
     }
 
     num.textContent = `${n}`;
@@ -62,7 +62,7 @@ export class Mul extends Base {
 
 export class Div extends Base {
   run(scope) {
-    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+    let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
     const num = new Number;
 
     for (let i = 1; i < this.children.length; i++) {
@@ -70,7 +70,7 @@ export class Div extends Base {
 
       if (!(child instanceof Base)) continue;
 
-      n /= child.toNumber().run();
+      n /= child.toNumber().run(scope);
     }
 
     num.textContent = `${n}`;

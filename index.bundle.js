@@ -174,12 +174,12 @@ class Main extends Base {
 }
 class Sum extends Base {
     run(scope) {
-        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
         const num = new Number;
         for(let i = 1; i < this.children.length; i++){
             const child = this.children[i];
             if (!(child instanceof Base)) continue;
-            n += child.toNumber().run();
+            n += child.toNumber().run(scope);
         }
         num.textContent = `${n}`;
         return num;
@@ -187,12 +187,12 @@ class Sum extends Base {
 }
 class Sub extends Base {
     run(scope) {
-        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
         const num = new Number;
         for(let i = 1; i < this.children.length; i++){
             const child = this.children[i];
             if (!(child instanceof Base)) continue;
-            n -= child.toNumber().run();
+            n -= child.toNumber().run(scope);
         }
         console.log(n);
         num.textContent = `${n}`;
@@ -201,12 +201,12 @@ class Sub extends Base {
 }
 class Mul extends Base {
     run(scope) {
-        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
         const num = new Number;
         for(let i = 1; i < this.children.length; i++){
             const child = this.children[i];
             if (!(child instanceof Base)) continue;
-            n *= child.toNumber().run();
+            n *= child.toNumber().run(scope);
         }
         num.textContent = `${n}`;
         return num;
@@ -214,12 +214,12 @@ class Mul extends Base {
 }
 class Div extends Base {
     run(scope) {
-        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run() : 0;
+        let n = this.children[0] instanceof Base ? this.children[0].toNumber().run(scope) : 0;
         const num = new Number;
         for(let i = 1; i < this.children.length; i++){
             const child = this.children[i];
             if (!(child instanceof Base)) continue;
-            n /= child.toNumber().run();
+            n /= child.toNumber().run(scope);
         }
         num.textContent = `${n}`;
         return num;
